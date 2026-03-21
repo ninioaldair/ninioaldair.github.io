@@ -40,18 +40,36 @@
       color: black;
     }
 
+    /* MATRIX */
     #matrix {
       position: fixed;
       top: 0;
       left: 0;
       z-index: -1;
     }
+
+    /* TERMINAL */
+    .terminal {
+      background: black;
+      border: 1px solid #00ffaa;
+      padding: 15px;
+      margin-bottom: 30px;
+    }
   </style>
 </head>
 
 <body>
 
+<!-- MATRIX -->
 <canvas id="matrix"></canvas>
+
+<!-- TERMINAL -->
+<div class="terminal">
+  <p>root@aldair:~# whoami</p>
+  <p>junior_pentester</p>
+  <p>root@aldair:~# status</p>
+  <p>Hack The Box player | Learning exploitation...</p>
+</div>
 
 <h1>Aldair Chavez</h1>
 <p>Junior Pentester | Hack The Box Player</p>
@@ -71,11 +89,7 @@
 
   <ul>
     <li>
-      <b>Lame</b> - <a href="#">Ver writeup</a>
-    </li>
-
-    <li>
-      <b>Legacy</b> - <a href="#">Ver writeup</a>
+      <b>Lame</b> - <a href="lame.html">Ver writeup</a>
     </li>
   </ul>
 </div>
@@ -102,6 +116,7 @@
   </ul>
 </div>
 
+<!-- MATRIX SCRIPT -->
 <script>
 const canvas = document.getElementById("matrix");
 const ctx = canvas.getContext("2d");
