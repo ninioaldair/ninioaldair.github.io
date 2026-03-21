@@ -19,6 +19,21 @@
 
     .section {
       margin-bottom: 60px;
+      opacity: 0;
+      transform: translateY(20px);
+      animation: fadeIn 1s forwards;
+    }
+
+    .section:nth-child(3) { animation-delay: 0.5s; }
+    .section:nth-child(4) { animation-delay: 1s; }
+    .section:nth-child(5) { animation-delay: 1.5s; }
+    .section:nth-child(6) { animation-delay: 2s; }
+
+    @keyframes fadeIn {
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
     }
 
     a {
@@ -40,7 +55,6 @@
       color: black;
     }
 
-    /* MATRIX */
     #matrix {
       position: fixed;
       top: 0;
@@ -48,7 +62,6 @@
       z-index: -1;
     }
 
-    /* TERMINAL */
     .terminal {
       background: black;
       border: 1px solid #00ffaa;
@@ -60,10 +73,8 @@
 
 <body>
 
-<!-- MATRIX -->
 <canvas id="matrix"></canvas>
 
-<!-- TERMINAL -->
 <div class="terminal">
   <p>root@aldair:~# whoami</p>
   <p>junior_pentester</p>
@@ -74,49 +85,54 @@
 <h1>Aldair Chavez</h1>
 <p>Junior Pentester | Hack The Box Player</p>
 
-<!-- BOTONES -->
+<div class="section">
+  <h2>🧑‍💻 About Me</h2>
+  <p>Soy estudiante de redes y seguridad informática, enfocado en pentesting.</p>
+</div>
+
+<div class="section">
+  <h2>🛠️ Skills</h2>
+  <ul>
+    <li>Linux</li>
+    <li>Networking</li>
+    <li>Nmap</li>
+    <li>Burp Suite</li>
+  </ul>
+</div>
+
 <div class="section">
   <h2>📂 Writeups</h2>
-
   <a href="#htb"><button>Hack The Box</button></a>
   <a href="#vulnhub"><button>VulnHub</button></a>
   <a href="#otros"><button>Otros</button></a>
 </div>
 
-<!-- HTB -->
 <div class="section" id="htb">
   <h2>💣 Hack The Box</h2>
-
   <ul>
-    <li>
-      <b>Lame</b> - <a href="lame.html">Ver writeup</a>
-    </li>
+    <li><b>Lame</b> - <a href="lame.html">Ver writeup</a></li>
   </ul>
 </div>
 
-<!-- VULNHUB -->
 <div class="section" id="vulnhub">
   <h2>🧪 VulnHub</h2>
-
   <ul>
-    <li>
-      <b>Basic Pentesting 1</b> - <a href="#">Ver writeup</a>
-    </li>
+    <li><b>Basic Pentesting 1</b> - <a href="#">Ver writeup</a></li>
   </ul>
 </div>
 
-<!-- OTROS -->
 <div class="section" id="otros">
   <h2>🌐 Otras Plataformas</h2>
-
   <ul>
-    <li>
-      <b>PortSwigger Lab</b> - <a href="#">Ver writeup</a>
-    </li>
+    <li><b>PortSwigger Lab</b> - <a href="#">Ver writeup</a></li>
   </ul>
 </div>
 
-<!-- MATRIX SCRIPT -->
+<div class="section">
+  <h2>📞 Contact</h2>
+  <p>GitHub: <a href="https://github.com/ninioaldair">ninioaldair</a></p>
+</div>
+
 <script>
 const canvas = document.getElementById("matrix");
 const ctx = canvas.getContext("2d");
