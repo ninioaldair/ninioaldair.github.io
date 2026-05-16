@@ -72,6 +72,29 @@ Se encontraron los siguientes servicios:
 
 <img src="images/scan.jpg" class="imagen">
 
+<p>
+Como podemos observar, la máquina tiene varios servicios expuestos, entre ellos los puertos son
+<b>22, 25, 80, 110, 119 y 4555</b>.
+</p>
+
+<p>
+Al acceder al servicio web en el puerto 80, nos encontramos con una página aparentemente estática
+y sin funcionalidades interesantes por detrás.
+</p>
+<img src="images/web.jpg" class="imagen">
+<p>
+Se intentó realizar fuzzing sobre la aplicación web en busca de directorios y archivos ocultos,
+pero no se encontró nada relevante.
+</p>
+
+<p>
+Posteriormente, llamó la atención el puerto <b>4555</b>, por lo que decidimos interactuar con él
+utilizando <b>Netcat</b>.
+</p>
+
+<pre>
+nc -nv &lt;IP&gt; 4555
+</pre>
 </div>
 
 </body>
